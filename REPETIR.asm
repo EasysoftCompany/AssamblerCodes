@@ -1,0 +1,20 @@
+INCLUDE "EMU8086.INC" 
+
+MOV CX,0
+MOV DX,0
+
+ETIQ1:
+  PRINTN "ANITA LAVA LA TINA"
+  
+  ADD CX,1
+  CMP CX,4
+  JE SALIDA
+  
+  JMP ETIQ1
+  SALIDA:
+  RET 
+  
+ 
+  
+  
+  
