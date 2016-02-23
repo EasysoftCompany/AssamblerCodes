@@ -3,3 +3,5 @@ Aqui se depositaran todos los codigos en lenguaje ensamblador para la materia de
 
 
 8086
+
+GERARDO MISAEL RICO CARLOS 2CM20
