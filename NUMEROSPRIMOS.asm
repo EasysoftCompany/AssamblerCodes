@@ -13,34 +13,34 @@ FOR:
     CMP BX,CX
     JE IMPRIMIR
         
+            
+       MOV AX,CX
+          
+       DIV BL ; AL = AX/OPERANDO => AX/BL => 7/1
+       
+      
+       
+       CMP AH,0
+       JE CONTADOR
+       
+           ADD BL,1
+           JMP FOR
+       
+       CONTADOR:
+       
+        ADD DX,1
+        ADD BL,1
+        JMP FOR
+            
+            
+    IMPRIMIR:
+    
+        CMP DX,1
+        JE PRIMO 
         
-   MOV AX,CX
-   
-   
-   DIV BL
-   
-  
-   
-   CMP AH,0
-   JE CONTADOR
-   
-   ADD BL,1
-   JMP FOR
-   
-   CONTADOR:
-   
-    ADD DX,1
-    ADD BL,1
-    JMP FOR
-            
-            
-            IMPRIMIR:
-            
-                CMP DX,1
-                JE PRIMO
-                    PRINTN
-                    PRINT "NO ES NUMERO PRIMO" 
-                    RET
+            PRINTN
+            PRINT "NO ES NUMERO PRIMO" 
+            RET
 
                    
                 PRIMO:
