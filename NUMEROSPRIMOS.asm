@@ -5,7 +5,7 @@ PRINT "INGRESE UN NUMERO >> "
 CALL SCAN_NUM
 
 MOV DX,0
-MOV BX,1
+MOV BL,1
 
 FOR:
      MOV AX,0
@@ -14,28 +14,38 @@ FOR:
     JE IMPRIMIR
         
         
-   MOV AX,BX
+   MOV AX,CX
    
-   DIV CL
+   
+   DIV BL
    
   
    
    CMP AH,0
    JE CONTADOR
    
-   ADD BX,1
+   ADD BL,1
    JMP FOR
    
    CONTADOR:
    
     ADD DX,1
-    ADD BX,1
+    ADD BL,1
     JMP FOR
             
             
             IMPRIMIR:
             
-    
+                CMP DX,1
+                JE PRIMO
+                    PRINTN
+                    PRINT "NO ES NUMERO PRIMO" 
+                    RET
+
+                   
+                PRIMO:
+                    PRINTN
+                    PRINT "ES NUMERO PRIMO" 
                     RET
                 
 
