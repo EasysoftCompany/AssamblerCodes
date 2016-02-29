@@ -1,3 +1,33 @@
+;*************************************************************************************************   
+;                                                                                                *
+;                                     INSTITUTO POLITECNICO NACIONAL                             *
+;                                                                                                *
+;                                                                                                *
+;                       UNIDAD PROFESIONAL INTERDISCIPLINARIA DE INGENIERIA                      *
+;                                                                                                *
+;                                Y CIENCIAS SOCIALES Y ADMISTRATIVAS                             *
+;                                                                                                *
+;                                                                                                *
+;                                                                                                *
+;                                                                                                *
+;                                          "NUMEROS PRIMOS"                                      *
+;                                                                                                *
+;                                                                                                *
+;                                                                                                *
+;                                              PROGRAMA NO. 12                                   *
+;                                                                                                *
+;                                                                                                *
+;                                                                                                *
+;   DESCRIPCION: EL PROGRAMA SOLICITA AL USUARIO EL NUMERO PARA DETERMINAR SI ESTE ES UN NUMERO  *
+;                PRIMO O NO  Y MOSTRAR EN PANTALLA EL RESULTADO DE ESTA EVALUACION               *
+;                                                                                                *
+;                                                                                                *
+;                                                                                                *
+;                                                                                                *
+;                                                                                                *
+;                                                                                                *
+;*************************************************************************************************
+
 INCLUDE "EMU8086.INC"
 ;CALCULA SI UN NUMERO ES PRIMO O NO 
 

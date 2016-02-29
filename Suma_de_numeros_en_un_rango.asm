@@ -1,3 +1,34 @@
+;*************************************************************************************************   
+;                                                                                                *
+;                                     INSTITUTO POLITECNICO NACIONAL                             *
+;                                                                                                *
+;                                                                                                *
+;                       UNIDAD PROFESIONAL INTERDISCIPLINARIA DE INGENIERIA                      *
+;                                                                                                *
+;                                Y CIENCIAS SOCIALES Y ADMISTRATIVAS                             *
+;                                                                                                *
+;                                                                                                *
+;                                                                                                *
+;                                                                                                *
+;                                "SUMATORIA DE NUMEROS EN UN RANGO"                              *
+;                                                                                                *
+;                                                                                                *
+;                                                                                                *
+;                                              PROGRAMA NO. 7                                    *
+;                                                                                                *
+;                                                                                                *
+;                                                                                                *
+;   DESCRIPCION: EL PROGRAMA REALIZARA LA SUMA DE LOS NUMEROS COMPRENDIDOS ENTRE 12 Y 34         *
+;                CUANDO EL USUARIO LO SOLICITE LO MOSTRARA EN PANTALLA,EL PROGRAMA MUESTRA UN    *
+;                MENSAJE CUANDO EL NUMERO INGRESADO SE ENCUENTRA EN EL RANGO ESPECIFICADO        *
+;                                                                                                *
+;                                                                                                *
+;                                                                                                *
+;                                                                                                *
+;                                                                                                *
+;*************************************************************************************************
+
+
 INCLUDE "EMU8086.INC"  
 
 MOV BX,0

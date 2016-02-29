@@ -1,3 +1,35 @@
+;*************************************************************************************************   
+;                                                                                                *
+;                                     INSTITUTO POLITECNICO NACIONAL                             *
+;                                                                                                *
+;                                                                                                *
+;                       UNIDAD PROFESIONAL INTERDISCIPLINARIA DE INGENIERIA                      *
+;                                                                                                *
+;                                Y CIENCIAS SOCIALES Y ADMISTRATIVAS                             *
+;                                                                                                *
+;                                                                                                *
+;                                                                                                *
+;                                                                                                *
+;                                "ANITA LAVA LA TINA (REPETICIONES)"                             *
+;                                                                                                *
+;                                                                                                *
+;                                                                                                *
+;                                              PROGRAMA NO. 1                                    *
+;                                                                                                *
+;                                                                                                *
+;                                                                                                *
+;   DESCRIPCION: EL PROGRAMA IMPRIMIRA EN PANTALLA LA ORACION "ANITA LAVA LA TINA" 1500 VECES    *
+;                UTILIZANDO UN CONTADOR BX                                                       *
+;                                                                                                *
+;                                                                                                *
+;                                                                                                *
+;                                                                                                *
+;                                                                                                *
+;                                                                                                *
+;                                                                                                *
+;*************************************************************************************************
+
+
 INCLUDE "EMU8086.INC"
  
  MOV AX,1   ;Inicializamos el registro AX en 1, este sera el contador

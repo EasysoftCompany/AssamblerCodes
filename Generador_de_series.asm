@@ -1,3 +1,34 @@
+;*************************************************************************************************   
+;                                                                                                *
+;                                     INSTITUTO POLITECNICO NACIONAL                             *
+;                                                                                                *
+;                                                                                                *
+;                       UNIDAD PROFESIONAL INTERDISCIPLINARIA DE INGENIERIA                      *
+;                                                                                                *
+;                                Y CIENCIAS SOCIALES Y ADMISTRATIVAS                             *
+;                                                                                                *
+;                                                                                                *
+;                                                                                                *
+;                                                                                                *
+;                                          "GENERADOR DE SERIES"                                 *
+;                                                                                                *
+;                                                                                                *
+;                                                                                                *
+;                                              PROGRAMA NO. 10                                   *
+;                                                                                                *
+;                                                                                                *
+;                                                                                                *
+;   DESCRIPCION: EL PROGRAMA SOLICITA AL USUARIO EL NUMERO DE POSICIONES QUE OCUPARA LA SERIE    *
+;                EN CADA ITERACION SE INCREMENTA EN 3 EL NUMERO QUE SE IMPRIMIRA EN PANTALLA     *
+;                ENTONCES LA SERIE VA DE 3 EN 3                                                  *
+;                                                                                                *
+;                                                                                                *
+;                                                                                                *
+;                                                                                                *
+;                                                                                                *
+;                                                                                                *
+;*************************************************************************************************
+
 INCLUDE "EMU8086.INC"
 ;GENERA SERIE 3,6,9...
 

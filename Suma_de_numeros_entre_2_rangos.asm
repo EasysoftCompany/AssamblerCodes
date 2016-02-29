@@ -14,7 +14,7 @@
 ;                                                                                                *
 ;                                                                                                *
 ;                                                                                                *
-;                                              PROGRAMA NO. 7                                    *
+;                                              PROGRAMA NO. 8                                    *
 ;                                                                                                *
 ;                                                                                                *
 ;                                                                                                *

@@ -1,3 +1,33 @@
+;*************************************************************************************************   
+;                                                                                                *
+;                                     INSTITUTO POLITECNICO NACIONAL                             *
+;                                                                                                *
+;                                                                                                *
+;                       UNIDAD PROFESIONAL INTERDISCIPLINARIA DE INGENIERIA                      *
+;                                                                                                *
+;                                Y CIENCIAS SOCIALES Y ADMISTRATIVAS                             *
+;                                                                                                *
+;                                                                                                *
+;                                                                                                *
+;                                                                                                *
+;                                          "FACTORIAL DE UN NUMERO"                              *
+;                                                                                                *
+;                                                                                                *
+;                                                                                                *
+;                                              PROGRAMA NO. 11                                   *
+;                                                                                                *
+;                                                                                                *
+;                                                                                                *
+;   DESCRIPCION: EL PROGRAMA SOLICITA AL USUARIO EL NUMERO PARA CALCULAR SU FACTORIAL Y MOSTRAR  *
+;                PANTALLA EL RESULTADO                                                           *
+;                                                                                                *
+;                                                                                                *
+;                                                                                                *
+;                                                                                                *
+;                                                                                                *
+;                                                                                                *
+;*************************************************************************************************
+
 INCLUDE "EMU8086.INC"
 
 PRINTN
