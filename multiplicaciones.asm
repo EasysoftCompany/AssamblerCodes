@@ -1,3 +1,4 @@
+;prog 17
 INCLUDE "EMU8086.INC"  
     
     MAIN:

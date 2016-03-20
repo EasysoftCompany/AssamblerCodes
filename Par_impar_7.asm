@@ -10,18 +10,18 @@
 ;                                                                                                *
 ;                                                                                                *
 ;                                                                                                *
-;                                          "GENERADOR DE SERIES PLUS"                            *
+;                                          "PAR IMPAR VERSION 7"                                 *
 ;                                                                                                *
 ;                                                                                                *
 ;                                                                                                *
-;                                              PROGRAMA NO. 16                                   *
+;                                              PROGRAMA NO. 18                                   *
 ;                                                                                                *
 ;                                                                                                *
 ;                                                                                                *
-;   DESCRIPCION: EL PROGRAMA SOLICITA AL USUARIO EL NUMERO DE POSICIONES QUE OCUPARA LA SERIE    *
-;                EN CADA ITERACION SE INCREMENTA EN 3 EL NUMERO QUE SE IMPRIMIRA EN PANTALLA     *
-;                ENTONCES LA SERIE VA DE 3 EN 3                                                  *
-;                                                                                                *
+;   DESCRIPCION: EL PROGRAMA SOLICITA AL USUARIO UN NUMERO "X" DIVIDE EL NUMERO ENTRE 2 Y EVALUA *
+;                EL RESIDUO, SI ESTE ES 0 IMPRIME QUE EL NUMERO ES PAR, DE LO CONTRARIO IMPRIME  *
+;                QUE ES IMPAR, ADEMAS SI EL USUARIO INGRESA EL NUMERO "9999" EL PROGRAMA TERMINA  *
+;                DE LO CONTRARIO EL PROGRAMA VUELVE A SOLICITAR UN NUMERO Y VUELVE A EMPEZAR     *
 ;                                                                                                *
 ;                                                                                                *
 ;                                                                                                *
@@ -30,77 +30,71 @@
 ;*************************************************************************************************
 
 INCLUDE "EMU8086.INC"
-;GENERA SERIE 3,6,9...
+
+MOV BL,2 ; ASIGNAR EL NUMERO 2 AL REGISTRO BL (PERMANECE CONSTANTE)
+MOV DX,9999
 
 
-PRINT "SERIE GENERADA: "
- 
- 
- CICLO:
- 
- CMP BX,20
- JE SALIR 
- 
- ADD AX,3 
- ADD BX,1  
- 
- 
-     
-     
-      
-     CALL PRINT_NUM 
-      PRINT ", "
-     
-     
-     
-     
-     CMP AX,15
-     JGE COMPARA
-     JMP CICLO
-     
-     
-     COMPARA:
-        CMP AX,450
-        JBE GUARDAR
-        JMP CICLO
+MENU:
+
+    
+    PRINT "(Salir = 9999) TECLEA UN NUMERO: "
+    CALL SCAN_NUM ;HOLA, SOY UN MACRO Y LEERE UN NUMERO 
+                  ;CON CALL SCAN_NUM VA A DIRIGIR LA ENTRADA DE DATOS A CX SIEMPRE
+    
+    
+    MOV AX,CX ;ASIGNAMOS LO INGRESADO POR EL USUARIO A AX, ESTO PARA PODER HACER USO DE DIV
+    
+    
+    
+    
+    CMP DX,AX
+    JNE COMPARAR
+            
+                PRINTN
+                PRINT "HASTA LUEGO"
+                RET
+                
         
+        COMPARAR:
+        
+        
+             DIV BL;  AL= AX/OPERANDO<BL> AH= RESIDUO
+        
+            CMP AH,0 ;COMPARAR EL RESIDUO CON 0
+            JE PAR   ;SI ES IGUAL A 0 SALTA A LA ETIQUETA PAR:
+            
+            
+                MOV AX,CX
+                PRINTN ;SALTO DE LINEA
+                PRINT "EL NUMERO "
+                CALL PRINT_NUM
+                PRINT " ES IMPAR"
+                PRINTN
+                JMP MENU
+                                
+            
                
-        GUARDAR:
-            ADD CX,1
-            JMP CICLO
-            
-            
-     
-     
-     
-     
-     
-   
-   SALIR:
-   
-   PRINTN
-   PRINTN
-   
-   PRINT "LA SUMA DE LOS PRIMEROS 200 NUMEROS DE LA SERIE ES: "
-   CALL PRINT_NUM
-   
-   PRINTN
-   PRINTN 
-   PRINT "HAY "
-   MOV AX,CX
-   CALL PRINT_NUM
-   PRINT " NUMEROS ENTRE 15 Y 450 SEGUN LA SERIE"
-   
-   RET     
-   
-   ;---------INCLUIR ESTAS LIBRERIAS PARA QUE JALE-------------- 
-  
- DEFINE_SCAN_NUM 
- DEFINE_PRINT_NUM 
- DEFINE_PRINT_NUM_UNS  
-  
- ;---------INCLUIR ESTAS LIBRERIAS PARA QUE JALE----------- 
+               
+                PAR:      ;ETIQUETA PAR 
+                    MOV AX,CX
+                    PRINTN
+                    PRINT "EL NUMERO "
+                    CALL PRINT_NUM
+                    PRINT " ES PAR"
+                    PRINTN
+                    JMP MENU
+    
 
-   
+
+;---------INCLUIR ESTAS LIBRERIAS PARA QUE JALE--------------
+
+DEFINE_SCAN_NUM
+DEFINE_PRINT_NUM
+DEFINE_PRINT_NUM_UNS 
+
+;---------INCLUIR ESTAS LIBRERIAS PARA QUE JALE--------------
+
+
+
  
-  

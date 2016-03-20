@@ -1,3 +1,5 @@
+
+;num 14
 INCLUDE "EMU8086.INC"  
 
     MOV DX,65000
