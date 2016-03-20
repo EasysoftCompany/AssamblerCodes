@@ -1,6 +1,8 @@
 INCLUDE "EMU8086.INC"  
-
-    PRINT "MULTIPLICACIONES  "
+    
+    MAIN:
+    
+    PRINT "MULTIPLICACIONES (9999 = SALIR) "
     
     PRINTN
     PRINT "PRIMER NUMERO: "
@@ -12,20 +14,28 @@ INCLUDE "EMU8086.INC"
     CALL SCAN_NUM
     MOV BX,CX
     
+    
+    CMP AX,9999
+    JE SALIR
+    
+    CMP BX,9999
+    JE SALIR
+    
+    
     MOV DX,0
     MOV CX,0 
     
      CICLO:
     
     CMP AX,DX
-    JE SALIR
+    JE IMPRIMIR
                 
         ADD CX,BX        
         ADD DX,1 
         JMP CICLO
         
         
-        SALIR:
+        IMPRIMIR:
         
             PRINTN
             PRINTN
@@ -36,6 +46,17 @@ INCLUDE "EMU8086.INC"
             PRINT " = "
             MOV AX,CX
             CALL PRINT_NUM
+            
+            PRINTN 
+            JMP MAIN
+            
+            
+            
+            SALIR: 
+            PRINTN
+            PRINTN
+            PRINTN
+            PRINT "ADIOS!"
             RET
     
        
