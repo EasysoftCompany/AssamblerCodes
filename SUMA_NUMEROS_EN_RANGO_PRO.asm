@@ -15,8 +15,7 @@
             CMP AL,16
             JGE COMPARA1
              
-             INC BX
-             JMP CICLO
+             JMP NOGUARDA
             
             
             COMPARA1:
@@ -24,14 +23,35 @@
                 CMP AL,35
                 JBE GUARDA
                        
-                     INC BX  
-                    JMP CICLO
+                    JMP NOGUARDA 
+                    
+                    
+                    
+                    NOGUARDA:
+                    
+                            PRINTN 
+                            PRINT "EL NUMERO "
+                            CALL PRINT_NUM
+                            PRINT " NO ES CONSIDERADO. LA SUMA AL MOMENTO ES: "
+                            MOV AX,DX
+                            CALL PRINT_NUM
+                            INC BX
+                            JMP CICLO
+                        
+                    
                         
                     GUARDA:
                         ADD DX,AX
-                        INC BX
-                        JMP CICLO
-                
+                        
+                            PRINTN 
+                            PRINT "EL NUMERO "
+                            CALL PRINT_NUM
+                            PRINT " ES CONSIDERADO. LA SUMA AL MOMENTO ES: "
+                            MOV AX,DX
+                            CALL PRINT_NUM
+                            INC BX
+                            JMP CICLO
+      
             
             SALIR:
             
