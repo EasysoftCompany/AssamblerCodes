@@ -8,20 +8,23 @@ MOV BX,DATOS
     
     MAIN:
     
-     MOV AL,[BX]
-     MOV DL,[BX] 
+     MOV CL,[BX]
+     MOV DX,AX 
     
         CMP AL,"/"
         JE SALIR
     
             FOR:
                                 
-                CMP DL,1
+                
+                
+                SUB DX,1
+                
+                MOV 
+                MUL DX
+                
+                CMP DX,1
                 JE IMPRIMIR
-                
-                SUB DL,1
-                
-                MUL DL
                  
                 
             JMP FOR
@@ -50,7 +53,7 @@ MOV BX,DATOS
     
      
     
-    DATOS: DB 1,16,2,7,3,18,4,19,5,20,6,21,7,22,8,23,9,24,10,11,25,26,30,14,16,40,"/"
+    DATOS: DB 1,2,3,4,5,"/"
   
   DEFINE_PRINT_NUM
   DEFINE_PRINT_NUM_UNS
