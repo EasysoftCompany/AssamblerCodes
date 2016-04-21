@@ -34,7 +34,7 @@ INCLUDE "EMU8086.INC"
 MOV AX,00 
 MOV BX,01 
 MOV DX,00
-MOV CX,10  
+MOV CX,23 
             
 
 CICLO: 
@@ -44,8 +44,11 @@ CICLO:
       MOV BX,DX 
       MOV DX,AX      
       
-      CALL PRINT_NUM 
-      PRINT ", "  
+      PRINTN
+      PRINT " />   "
+      CALL PRINT_NUM
+      PRINTN 
+        
       
 LOOP CICLO  
                   
