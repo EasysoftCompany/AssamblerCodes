@@ -13,7 +13,7 @@ lazo:
     cmp cl,0
     jz cambios ; verifica el numero de cambios  
     cmp al,cl
-    jbe mayor  ;Cambiar Orden Creciente o Decreciente
+    jg mayor  ;Cambiar Orden Creciente o Decreciente aplicando la comparacion de 2 elementos de la "lista"
     jmp lazo   
      
 mayor:   
@@ -51,7 +51,7 @@ imprime:
 
     
     
-lista: DB 1,3,5,7,8,6,4,2,0
+lista: DB 1,3,5,5,7,8,6,4,2,0
 
 define_print_num
 define_print_num_uns
